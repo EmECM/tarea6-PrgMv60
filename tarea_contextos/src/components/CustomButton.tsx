@@ -1,6 +1,5 @@
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-//Definicion de propiedades para Button
 interface CustomButtonProps{
     title: string;
     onClick: () => void;
@@ -29,21 +28,22 @@ export default function CustomButton({
 }
 
 
-const getStyles = (variant:'primary' | 'secondary') =>
+const getStyles = (variant: 'primary' | 'secondary' ) => 
     StyleSheet.create({
     container: {
         paddingVertical: 15,
         alignItems: 'center',
         width: "80%",
         backgroundColor: 
-            variant === "primary" ? "#35ffb8": "#ffa4a4",
+            variant === "primary" ? "#bdfec4": "#f7b9b9",
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: "#f3f4f6",
+        borderColor: "#3e3e3e",
     },
     text: {
-        color: "black",
-        fontSize: 15,
+        color: 
+            variant === "primary" ?  "#4d40ff" : "black",
+        fontSize: 18,
         fontWeight: "500"
     }
 });

@@ -1,8 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
-import {View} from 'react-native';
 import StackNavigator from './src/components/navigation/StackNavigator';
-import { AuthProvider } from './src/contexts/AuthContext';
-import { LanguageProvider } from './src/contexts/LanguageContext';
+import { AuthProvider } from './src/components/contexts/AuthContext';
 
 
 export default function App() {
