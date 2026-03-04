@@ -37,7 +37,7 @@ export default function LoginScreen() {
         
         <View style={styles.selectorWrapper}>
           <RadioOption label="Administrador" value="admin" />
-          <RadioOption label="Usuario Común" value="common" />
+          <RadioOption label="Usuario Comun" value="common" />
         </View>
 
         <View style={styles.buttonsWrapper}>

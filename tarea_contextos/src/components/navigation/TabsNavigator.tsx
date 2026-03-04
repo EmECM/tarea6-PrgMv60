@@ -15,24 +15,15 @@ export default function TabsNavigator (){
 //obtener usuario del contexto
 const {user}= useAuth();
 
-//definicion ternario para el acceso de settings o home
-const initialRoute = user?.role === 'admin' ? 'Settings':'Home';
 
     return(
-        <Tab.Navigator>
-            <Tab.Screen
-                name = "Home"
-                component={HomeScreen}
-            />
-            {/*condicional para mostar settings al admin*/}
+        // redireccion de pantalla de inicio segun el rol
+        <Tab.Navigator initialRouteName={user?.role === 'admin' ? 'Settings' : 'Home'}>
+            <Tab.Screen name="Home" component={HomeScreen} />
+            {/*render de Settings si es admin*/}
             {user?.role === 'admin' && (
-                <Tab.Screen
-                name = "Settings"
-                component={SettingsScreen}
-            />
-
+                <Tab.Screen name="Settings" component={SettingsScreen} />
             )}
-            
         </Tab.Navigator>
     );
 
